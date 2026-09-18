@@ -1,0 +1,22 @@
+{
+  "name": "Milne Family Law",
+  "short_name": "Milne Law",
+  "description": "Warren Milne — family lawyer serving Midland, Barrie, Newmarket, Ontario and beyond.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#262e4a",
+  "lang": "en-CA",
+  "icons": [
+    {
+      "src": "https://media.cwd-cdn.com/Milne-Family_Law/images/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://media.cwd-cdn.com/Milne-Family_Law/images/favicon-270.png",
+      "sizes": "270x270",
+      "type": "image/png"
+    }
+  ]
+}
