@@ -1,0 +1,6 @@
+﻿.wrangler/
+assets-temp/
+assets/
+.DS_Store
+Thumbs.db
+*.log
