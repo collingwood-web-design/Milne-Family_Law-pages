@@ -1,13 +1,4 @@
 (() => {
-  const dateEl = document.querySelector("[data-copyright-date]");
-  if (dateEl) {
-    dateEl.textContent = new Intl.DateTimeFormat("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    }).format(new Date());
-  }
-
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector("#site-nav");
   if (toggle && nav) {
@@ -15,6 +6,28 @@
       const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+  }
+
+  const dropdown = document.querySelector(".nav-item--dropdown");
+  const dropToggle = dropdown?.querySelector(".nav-dropdown__toggle");
+  if (dropdown && dropToggle) {
+    dropToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      const open = dropdown.classList.toggle("is-open");
+      dropToggle.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("is-open");
+        dropToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        dropdown.classList.remove("is-open");
+        dropToggle.setAttribute("aria-expanded", "false");
+      }
     });
   }
 
