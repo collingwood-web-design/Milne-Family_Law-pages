@@ -53,6 +53,9 @@
       "inLanguage": "en-CA",
       "breadcrumb": {
         "@id": "https://milnefamilylaw.com/fees#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://milnefamilylaw.com/fees#offers"
       }
     },
     {
@@ -68,8 +71,47 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Fees and What to Expect",
+          "name": "Fees",
           "item": "https://milnefamilylaw.com/fees"
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://milnefamilylaw.com/fees#offers",
+      "name": "Milne Family Law fees",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Initial 30-minute consultation",
+          "price": "150.00",
+          "priceCurrency": "CAD",
+          "description": "Initial 30-minute consultation for a frank assessment of your situation and options. [Meeting location to be confirmed before publishing.]",
+          "url": "https://milnefamilylaw.com/book-online",
+          "seller": {
+            "@type": "LegalService",
+            "@id": "https://milnefamilylaw.com/#business",
+            "name": "Milne Family Law",
+            "url": "https://milnefamilylaw.com/",
+            "telephone": "+1-705-408-3370",
+            "email": "warren@milnefamilylaw.com"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Hourly legal services",
+          "price": "350.00",
+          "priceCurrency": "CAD",
+          "unitText": "HOUR",
+          "description": "Most work billed hourly at $350.00. Some services available for a flat fee quoted in advance. No Legal Aid certificates accepted.",
+          "seller": {
+            "@type": "LegalService",
+            "@id": "https://milnefamilylaw.com/#business",
+            "name": "Milne Family Law",
+            "url": "https://milnefamilylaw.com/",
+            "telephone": "+1-705-408-3370",
+            "email": "warren@milnefamilylaw.com"
+          }
         }
       ]
     }

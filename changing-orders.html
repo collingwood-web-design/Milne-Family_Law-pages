@@ -50,6 +50,12 @@
       "isPartOf": {
         "@id": "https://milnefamilylaw.com/#website"
       },
+      "about": {
+        "@id": "https://milnefamilylaw.com/changing-orders#service"
+      },
+      "mainEntity": {
+        "@id": "https://milnefamilylaw.com/changing-orders#service"
+      },
       "inLanguage": "en-CA",
       "breadcrumb": {
         "@id": "https://milnefamilylaw.com/changing-orders#breadcrumb"
@@ -68,10 +74,44 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Changing a Court Order or Agreement",
+          "name": "Changing Orders",
           "item": "https://milnefamilylaw.com/changing-orders"
         }
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://milnefamilylaw.com/changing-orders#service",
+      "name": "Changing a Court Order or Agreement",
+      "description": "Motions to change and amending agreements for support and parenting when circumstances change.",
+      "url": "https://milnefamilylaw.com/changing-orders",
+      "provider": {
+        "@type": "LegalService",
+        "@id": "https://milnefamilylaw.com/#business",
+        "name": "Milne Family Law",
+        "url": "https://milnefamilylaw.com/",
+        "telephone": "+1-705-408-3370",
+        "email": "warren@milnefamilylaw.com"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Midland"
+        },
+        {
+          "@type": "City",
+          "name": "Penetanguishene"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Simcoe County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ontario"
+        }
+      ],
+      "serviceType": "Family law"
     }
   ]
 }
@@ -89,7 +129,7 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="./">HOME</a>
-        <div class="nav-item nav-item--dropdown is-open">
+        <div class="nav-item nav-item--dropdown">
           <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-controls="services-menu">Services</button>
           <ul id="services-menu" class="nav-dropdown">
           <li><a href="separation-divorce">Separation &amp; Divorce</a></li>
