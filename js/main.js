@@ -141,9 +141,7 @@
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     const PHONE = "705-408-3370";
-    const message =
-      contactForm.dataset.successMessage ||
-      `Thank you. Your message has been sent. If your matter is urgent, please call ${PHONE}.`;
+    const message = contactForm.dataset.successMessage || "Thank you. Your message has been sent.";
     let dialog;
 
     const buildDialog = () => {
