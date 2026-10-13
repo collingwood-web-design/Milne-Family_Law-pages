@@ -138,6 +138,54 @@
     }
   }
 
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    const PHONE = "705-408-3370";
+    const message =
+      contactForm.dataset.successMessage ||
+      `Thank you. Your message has been sent. If your matter is urgent, please call ${PHONE}.`;
+    let dialog;
+
+    const buildDialog = () => {
+      dialog = document.createElement("dialog");
+      dialog.className = "form-dialog";
+      dialog.setAttribute("aria-label", "Form submitted");
+
+      const text = document.createElement("p");
+      text.className = "form-dialog__message";
+      const [before, after] = message.split(PHONE);
+      text.append(before);
+      if (after !== undefined) {
+        const tel = document.createElement("a");
+        tel.href = "tel:+17054083370";
+        tel.textContent = PHONE;
+        text.append(tel, after);
+      }
+
+      const close = document.createElement("button");
+      close.type = "button";
+      close.className = "form-dialog__close";
+      close.textContent = "Close";
+      close.addEventListener("click", () => dialog.close());
+
+      dialog.append(text, close);
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      document.body.appendChild(dialog);
+    };
+
+    contactForm.addEventListener("cwd-contact:success", () => {
+      const status = contactForm.querySelector("[data-cwd-contact-status]");
+      if (status) status.textContent = message;
+      if (!dialog) buildDialog();
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+        dialog.querySelector(".form-dialog__close").focus();
+      }
+    });
+  }
+
   const root = document.querySelector("[data-slider]");
   if (!root) return;
 

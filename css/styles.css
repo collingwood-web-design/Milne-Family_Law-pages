@@ -1024,6 +1024,52 @@ li + li {
   color: #8a1c14;
 }
 
+.form-dialog {
+  width: min(30rem, calc(100vw - 2rem));
+  padding: 2rem 1.75rem 1.6rem;
+  border: 0;
+  border-top: 4px solid var(--gold);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 18px 50px rgba(38, 46, 74, 0.25);
+}
+
+.form-dialog::backdrop {
+  background: rgba(38, 46, 74, 0.55);
+}
+
+.form-dialog__message {
+  margin: 0 0 1.4rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.form-dialog__message a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.form-dialog__close {
+  border: 0;
+  padding: 0.7rem 1.4rem;
+  background: var(--gold);
+  color: var(--white);
+  font: 600 0.9rem/1 var(--font-body);
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.form-dialog__close:hover {
+  background: #9d7a58;
+}
+
+.form-dialog__close:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
 /* Footer */
 .site-footer {
   background: var(--white);

@@ -2,9 +2,6 @@
   const form = document.getElementById("contact-form");
   if (!form || !form.classList.contains("request-form")) return;
 
-  const SUCCESS_MESSAGE =
-    "Thank you. Your request has been sent. I’ll confirm a time within one business day. If your matter is urgent, please call 705-408-3370.";
-
   const pad = (n) => String(n).padStart(2, "0");
   const toISO = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   const fromISO = (value) => {
@@ -102,13 +99,6 @@
       updateCourt();
       updateCount();
     }, 0);
-  });
-
-  form.addEventListener("cwd-contact:success", () => {
-    const status = form.querySelector("[data-cwd-contact-status]");
-    if (!status) return;
-    status.textContent = SUCCESS_MESSAGE;
-    status.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 
   updateCourt();
